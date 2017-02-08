@@ -1,0 +1,23 @@
+{
+    "name": "lireincore/helpers",
+    "description": "Helpers",
+    "version": "0.1.0",
+    "type": "library",
+    "keywords": ["helpers"],
+    "homepage": "https://github.com/lireincore/helpers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lirein",
+            "email": "lirein@inbox.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "LireinCore\\Helpers\\": "src"
+        }
+    }
+}
