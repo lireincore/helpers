@@ -1,6 +1,6 @@
 <?php
 
-namespace LireinCore\Helpers\Seo;
+namespace LireinCore\Helpers;
 
 class Robots
 {

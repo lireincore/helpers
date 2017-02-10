@@ -18,9 +18,20 @@ or
 $ composer require lireincore/helpers
 ```
 
-## Classes
+## Helpers
 
 * [Sitemap](docs/sitemap.md)
+* [Robots]
+* [HArray]
+* [HDebug]
+* [HDir]
+* [HFunction]
+* [HString]
+
+## Traits
+
+* [TStatic]
+* [TSingleton]
 
 ## License
 
