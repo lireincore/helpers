@@ -86,4 +86,10 @@ class HDebug
         fputs($ff, $log);
         fclose($ff);
     }
+
+    public static function pressEnterToContinue()
+    {
+        echo "Press ENTER to continue...";
+        fgets(STDIN);
+    }
 }

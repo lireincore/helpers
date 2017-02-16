@@ -1,10 +1,10 @@
 <?php
 
-namespace LireinCore\Helpers;
+namespace LireinCore\Helpers\Seo;
 
 use XMLWriter;
 
-class SitemapIndex
+class Index
 {
     /**
      * @var XMLWriter
@@ -56,14 +56,11 @@ class SitemapIndex
                 "The location must be a valid URL. You have specified: {$location}."
             );
         }
-
         if ($this->writer === null) {
             $this->createNewFile();
         }
-
         $this->writer->startElement('sitemap');
         $this->writer->writeElement('loc', $location);
-
         if ($lastModified !== null) {
             $this->writer->writeElement('lastmod', date('c', $lastModified));
         }
@@ -79,9 +76,9 @@ class SitemapIndex
     }
 
     /**
-     * Finishes writing
+     * Finish writing
      */
-    public function write()
+    public function finish()
     {
         if ($this->writer instanceof XMLWriter) {
             $this->writer->endElement();
@@ -96,6 +93,7 @@ class SitemapIndex
 
     /**
      * Sets whether the resulting file will be gzipped or not.
+     *
      * @param bool $value
      * @throws \RuntimeException when trying to enable gzip while zlib is not available
      */

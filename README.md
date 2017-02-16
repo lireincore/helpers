@@ -15,7 +15,7 @@ Add the `lireincore/helpers` package to your `require` section in the `composer.
 or
 
 ``` bash
-$ composer require lireincore/helpers
+$ composer require lireincore/helpers dev-master
 ```
 
 ## Helpers

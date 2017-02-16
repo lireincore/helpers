@@ -8,16 +8,28 @@ Generate sitemap files.
 
 ```php
 use LireinCore\Helpers\Seo\Sitemap;
-use LireinCore\Helpers\Seo\SitemapIndex;
+use LireinCore\Helpers\Seo\Index;
 
 // create sitemap
 $sitemap = new Sitemap(__DIR__ . '/sitemap.xml');
 
 // add some URLs
-$sitemap->addItem('http://example.com/mylink1');
-$sitemap->addItem('http://example.com/mylink2', time());
-$sitemap->addItem('http://example.com/mylink3', time(), Sitemap::HOURLY);
-$sitemap->addItem('http://example.com/mylink4', time(), Sitemap::DAILY, 0.3);
+$sitemap->addItem(new Url('http://example.com/mylink1'));
+$sitemap->addItem(
+    (new Url('http://example.com/mylink2'))
+        ->lastModified(time())
+);
+$sitemap->addItem(
+    (new Url('http://example.com/mylink3'))
+        ->lastModified(time())
+        ->changeFrequency(Url::HOURLY)
+);
+$sitemap->addItem(
+    (new Url('http://example.com/mylink4'))
+        ->lastModified(time())
+        ->changeFrequency(Url::DAILY)
+        ->priority(0.3)
+);
 
 // write it
 $sitemap->write();
@@ -29,9 +41,9 @@ $sitemapFileUrls = $sitemap->getSitemapUrls('http://example.com/');
 $staticSitemap = new Sitemap(__DIR__ . '/sitemap_static.xml');
 
 // add some URLs
-$staticSitemap->addItem('http://example.com/about');
-$staticSitemap->addItem('http://example.com/tos');
-$staticSitemap->addItem('http://example.com/jobs');
+$staticSitemap->addItem(new Url('http://example.com/about'));
+$staticSitemap->addItem(new Url('http://example.com/tos'));
+$staticSitemap->addItem(new Url('http://example.com/jobs'));
 
 // write it
 $staticSitemap->write();
