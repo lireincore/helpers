@@ -17,7 +17,7 @@ class HDebug
         static $sessions = [];
         
         $default_options = [
-            'path' => __DIR__,
+            'path' => sys_get_temp_dir(),
             'filename' => 'info.log', //имя файла
             'bt_count' => 5, //кол-во путей для backtrace
             'bt_start' => 0, //начальный путь для backtrace
@@ -74,7 +74,7 @@ class HDebug
             $log .= $nl . join($nl, $lines);
         }
 
-        $log_file = $options['path'] . $options['filename'];
+        $log_file = $options['path'] . DIRECTORY_SEPARATOR . $options['filename'];
 
         $sessions[$options['filename']] = isset($sessions[$options['filename']]) ? true : false;
         if ($clear || (!$sessions[$options['filename']] && isset($options['maxsize']) && filesize($log_file) > $options['maxsize']))

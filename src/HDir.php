@@ -51,7 +51,7 @@ class HDir
                 if (is_dir($full)) {
                     static::rrmdir($full);
                 } else {
-                    unlink($full);
+                    @unlink($full);
                 }
             }
         }

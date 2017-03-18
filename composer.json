@@ -6,6 +6,10 @@
     "keywords": ["helpers"],
     "homepage": "https://github.com/lireincore/helpers",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/lireincore/helpers/issues",
+        "source": "https://github.com/lireincore/helpers"
+    },
     "authors": [
         {
             "name": "lirein",
