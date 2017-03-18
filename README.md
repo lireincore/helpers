@@ -10,7 +10,7 @@ Helpers classes.
 
 ## Install
 
-Add the `lireincore/helpers` package to your `require` section in the `composer.json` file
+Add the `"lireincore/helpers": "dev-master"` package to your `require` section in the `composer.json` file
 
 or
 
