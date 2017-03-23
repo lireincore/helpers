@@ -49,7 +49,7 @@ class HDir
             if (($file != '.') && ($file != '..')) {
                 $full = $pathname . DIRECTORY_SEPARATOR . $file;
                 if (is_dir($full)) {
-                    static::rrmdir($full);
+                    static::rrm($full);
                 } else {
                     @unlink($full);
                 }

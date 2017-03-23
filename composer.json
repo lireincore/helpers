@@ -1,9 +1,8 @@
 {
     "name": "lireincore/helpers",
     "description": "Helpers",
-    "version": "0.1.0",
     "type": "library",
-    "keywords": ["helpers"],
+    "keywords": ["helpers", "sitemap", "robots", "array", "string"],
     "homepage": "https://github.com/lireincore/helpers",
     "license": "MIT",
     "support": {
