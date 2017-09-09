@@ -15,7 +15,7 @@ Add the `"lireincore/helpers": "dev-master"` package to your `require` section i
 or
 
 ``` bash
-$ composer require lireincore/helpers dev-master
+$ php composer.phar require lireincore/helpers dev-master
 ```
 
 ## Helpers
